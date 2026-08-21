@@ -1,0 +1,226 @@
+PS C:\Users\User\Desktop\react> git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\User\Desktop\react> git config --global user.name
+raneemarisnee
+PS C:\Users\User\Desktop\react> git config --global user.email 
+risnee119@gmail.com
+PS C:\Users\User\Desktop\react> git remote add origin https://github.com/RaneemaRisnee/IT3133_practical.git
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\User\Desktop\react> git init
+Initialized empty Git repository in C:/Users/User/Desktop/react/.git/
+PS C:\Users\User\Desktop\react> git remote add origin https://github.com/RaneemaRisnee/IT3133_practical.git
+PS C:\Users\User\Desktop\react> git add index.html
+PS C:\Users\User\Desktop\react> git commit -m "first commit"
+[master (root-commit) 2829307] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+PS C:\Users\User\Desktop\react> git branch -M main
+PS C:\Users\User\Desktop\react> git remote add origin https://github.com/RaneemaRisnee/IT3133_practical.git
+error: remote origin already exists.
+PS C:\Users\User\Desktop\react> git push -u origin main
+To https://github.com/RaneemaRisnee/IT3133_practical.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/RaneemaRisnee/IT3133_practical.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\User\Desktop\react> git config --global user.email 
+risnee119@gmail.com
+PS C:\Users\User\Desktop\react> git config --global user.name
+raneemarisnee
+PS C:\Users\User\Desktop\react> git fetch origin               
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 874 bytes | 79.00 KiB/s, done.
+From https://github.com/RaneemaRisnee/IT3133_practical
+ * [new branch]      main       -> origin/main
+PS C:\Users\User\Desktop\react> git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\User\Desktop\react> git push --set-upstream origin main
+To https://github.com/RaneemaRisnee/IT3133_practical.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/RaneemaRisnee/IT3133_practical.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\User\Desktop\react> git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+PS C:\Users\User\Desktop\react> git branch --set-upstream-to=origin/<branch> main
+fatal: the requested upstream branch 'origin/<branch>' does not exist
+hint:
+hint: If you are planning on basing your work on an upstream
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint:
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+hint: Disable this message with "git config set advice.setUpstreamFailure false"
+PS C:\Users\User\Desktop\react> git branch --set-upstream-to=origin/main         
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\User\Desktop\react> git fetch origin
+PS C:\Users\User\Desktop\react> git push
+To https://github.com/RaneemaRisnee/IT3133_practical.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/RaneemaRisnee/IT3133_practical.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\User\Desktop\react> git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+PS C:\Users\User\Desktop\react> git pull
+fatal: refusing to merge unrelated histories
+PS C:\Users\User\Desktop\react> git pull origin main --allow-unrelated-histories
+From https://github.com/RaneemaRisnee/IT3133_practical
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+PS C:\Users\User\Desktop\react> git commit -m "test commit" 
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\User\Desktop\react> 
+PS C:\Users\User\Desktop\react> git remote -v                 
+origin  https://github.com/RaneemaRisnee/IT3133_practical.git (fetch)
+origin  https://github.com/RaneemaRisnee/IT3133_practical.git (push)
+PS C:\Users\User\Desktop\react> git add .
+PS C:\Users\User\Desktop\react> git commit -m "first commit"
+[main 49344a1] first commit
+ 1 file changed, 1 deletion(-)
+PS C:\Users\User\Desktop\react> git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 271 bytes | 271.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RaneemaRisnee/IT3133_practical.git
+   4aa0e77..49344a1  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\User\Desktop\react> 
+PS C:\Users\User\Desktop\react> git add .
+PS C:\Users\User\Desktop\react> git commit -m "test commit" 
+[main 6cab175] test commit
+ 1 file changed, 7 insertions(+)
+PS C:\Users\User\Desktop\react> git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RaneemaRisnee/IT3133_practical.git
+   49344a1..6cab175  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\User\Desktop\react> npm init 
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (react)
+version: (1.0.0)                                                                                                                                                              
+description:                                                                                                                                                                  
+entry point: (index.js)                                                                                                                                                       
+test command:                                                                                                                                                                 
+git repository: (https://github.com/RaneemaRisnee/IT3133_practical.git)                                                                                                       
+keywords:                                                                                                                                                                     
+author:                                                                                                                                                                       
+license: (ISC)                                                                                                                                                                
+type: (commonjs)                                                                                                                                                              
+About to write to C:\Users\User\Desktop\react\package.json:
+
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaneemaRisnee/IT3133_practical.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RaneemaRisnee/IT3133_practical/issues"
+  },
+  "homepage": "https://github.com/RaneemaRisnee/IT3133_practical#readme"
+}
+
+
+Is this OK? (yes)
+
+npm notice
+npm notice New minor version of npm available! 11.6.2 -> 11.19.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.19.0
+npm notice To update run: npm install -g npm@11.19.0
+npm notice
+PS C:\Users\User\Desktop\react> npm install -D parcel
+
+added 122 packages, and audited 123 packages in 15s
+
+71 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\User\Desktop\react> npx parcel index.html
+🚨 Build failed.
+
+@parcel/core:
+Library targets are not supported in serve mode.
+
+
+  C:\Users\User\Desktop\react\package.json:16:11
+    15 |   "type": "commonjs",
+  > 16 |   "main": "index.js",
+  >    |           ^^^^^^^^^^ Target declared here
+    17 |   "scripts": {
+    18 |     "test": "echo \"Error: no test specified\" && exit 1"
+
+  💡 The "main" field is meant for libraries, not applications. Either remove the "main" field or choose a different target name.
+  📝 Learn more: https://parceljs.org/features/targets/#library-targets
+
